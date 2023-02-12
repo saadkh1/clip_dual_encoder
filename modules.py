@@ -6,10 +6,6 @@ import config as CFG
 
 
 class ImageEncoder(nn.Module):
-    """
-    Encode images to a fixed size vector
-    """
-
     def __init__(
         self, model_name=CFG.model_name, pretrained=CFG.pretrained, trainable=CFG.trainable
     ):
@@ -35,7 +31,6 @@ class TextEncoder(nn.Module):
         for p in self.model.parameters():
             p.requires_grad = trainable
 
-        # we are using the CLS token hidden representation as the sentence's embedding
         self.target_token_idx = 0
 
     def forward(self, input_ids, attention_mask):
