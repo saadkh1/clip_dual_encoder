@@ -9,6 +9,7 @@ I used Python 3.7 and [PyTorch](https://pytorch.org/) 1.7.1 to train and test my
 ```bash
 $ pip install timm==0.6.7
 $ pip install transformers
+```
 
 ## Training the model:
 ```
